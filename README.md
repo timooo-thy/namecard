@@ -1,2 +1,2 @@
 # Digital Name Card
- Working flask application With HTML5UP
+ Working flask application with HTML5UP, CSS, JS.
