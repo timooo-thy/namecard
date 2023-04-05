@@ -9,11 +9,12 @@
 		<title>Timothy Lee</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="static/assets/js/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="static/assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="static/assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="static/assets/css/ie8.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+		<!--[if lte IE 8]><script src="/static/assets/js/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/static/assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="/static/assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="/static/assets/css/ie8.css" /><![endif]-->
+        <link rel="icon" href="/static/images/favicon.ico"  />
+		<noscript><link rel="stylesheet" href="/static/assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-loading">
 
@@ -23,7 +24,7 @@
 				<!-- Main -->
 					<section id="main">
 						<header>
-							<span class="avatar"><img src="static/images/avatar.png" alt="" /></span>
+							<span class="avatar"><img src="/static/images/avatar.png" alt="" /></span>
 							<h1>Timothy Lee</h1>
 							<p>Data Scientist</p>
 						</header>
@@ -69,7 +70,7 @@
 								<li><a href="https://www.linkedin.com/in/timothy-lee-8066b4145/" class="fa-linkedin">LinkedIn</a></li>
 								<li><a href="https://www.instagram.com/timooo.thy/" class="fa-instagram">Instagram</a></li>
 								<li><a href="https://github.com/timooo-thy" class="fa-github">GitHub</a></li>
-                                <li><a href="https://timooo-thy.github.io/cv/" class="fa-desktop">Resume</a></li>
+                                <li><a href="http://timooo-thy.github.io/resume/" class="fa-desktop">Resume</a></li>
 							</ul>
 						</footer>
 					</section>
@@ -77,15 +78,18 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="copyright">
-							<li>&copy; Timothy Lee</li>
+							<li>&copy;<span id="year"></span>. Timothy Lee</li>
 							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</footer>
-
 			</div>
 
 		<!-- Scripts -->
-			<!--[if lte IE 8]><script src="static/assets/js/respond.min.js"></script><![endif]-->
+			<!--[if lte IE 8]><script src="/static/assets/js/respond.min.js"></script><![endif]-->
+            <script>
+                const currentYear = new Date().getFullYear();
+                document.getElementById("year").textContent = currentYear;
+            </script>
 			<script>
 				if ('addEventListener' in window) {
 					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
